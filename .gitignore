@@ -1,0 +1,51 @@
+# Datos_Sinteticos
+ojo.txt
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.vscode/
+.idea/
+*.swp
+*.swa*
+**/generated/
+*.tmp
+*.env
+
+# DiffusionPen
+**/DiffusionPen/archive/
+**/DiffusionPen/dataset/
+**/DiffusionPen/manifests/
+**/DiffusionPen/models/
+**/DiffusionPen/runs/
+**/DiffusionPen/style_models/
+**/DiffusionPen/output/
+**/DiffusionPen/*.pth
+**/DiffusionPen/*.pt
+**/DiffusionPen/*.zip
+**/DiffusionPen/generar.txt
+
+# FW-GAN
+**/FW-GAN/dataset/
+**/FW-GAN/runs/
+**/FW-GAN/splits/
+**/FW-GAN/output/
+**/FW-GAN/*.pth
+**/FW-GAN/*.hdf5
+**/FW-GAN/gen.txt
+**/FW-GAN/generar.txt
+
+# VATr-pp
+**/VATr-pp/dataset/
+**/VATr-pp/eval/
+**/VATr-pp/splits/
+**/VATr-pp/saved_models/
+**/VATr-pp/files/style_samples/
+**/VATr-pp/output/
+**/VATr-pp/*.pth
+**/VATr-pp/*.zip
+**/VATr-pp/generar.txtFW-GAN/data/*.hdf5

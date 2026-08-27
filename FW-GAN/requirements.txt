@@ -1,0 +1,11 @@
+# FW-GAN - Requisitos (venv)
+# Para usar: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+torch>=2.0.0
+torchvision>=0.15.0
+lpips>=0.1.0
+numpy
+Pillow
+omegaconf
+yaml
+tqdm

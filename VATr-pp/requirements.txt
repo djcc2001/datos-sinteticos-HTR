@@ -1,0 +1,10 @@
+# VATr-pp - Requisitos (venv)
+# Para usar: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+torch>=1.13.1
+torchvision>=0.14.1
+sentencepiece>=0.1.90
+numpy
+Pillow
+omegaconf
+tqdm

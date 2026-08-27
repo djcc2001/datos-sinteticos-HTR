@@ -1,0 +1,12 @@
+# DiffusionPen - Requisitos (venv)
+# Para usar: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+torch>=2.0.0
+torchvision>=0.15.0
+diffusers>=0.24.0
+transformers>=4.35.0
+numpy
+Pillow
+omegaconf
+einops
+tqdm
