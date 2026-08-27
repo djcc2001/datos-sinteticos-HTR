@@ -49,3 +49,4 @@ __pycache__/
 **/VATr-pp/*.pth
 **/VATr-pp/*.zip
 **/VATr-pp/generar.txtFW-GAN/data/*.hdf5
+FW-GAN/data/*.hdf5
