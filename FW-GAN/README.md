@@ -1,32 +1,29 @@
-# FW-GAN: Síntesis de Escritura Manuscript Frecuencia-Driven
+# FW-GAN
 
-**Paper**: FW-GAN: Frequency-Driven Handwriting Synthesis with Wave-Modulated MLP Generator  
-**GitHub**: https://github.com/DAIR-Group/FW-GAN
+GAN para síntesis de escritura manuscrita con módulos Wave-MLP modulados por ondas, e incorporando un discriminador guiado por frecuencia para mejorar la fidelidad estilística.
 
-## 📋 Introducción
-GAN para síntesis de escritura manuscrito con módulos Wave-MLP modulados por ondas. Incorpora discriminador guided by frequency para fidelidad estilística mejorada. Evaluado en español con foco en el carácter ñ y adaptación via fine-tuning.
+## 📎 Referencia original
 
-## 📊 Resultados y Métricas en Español
-- **CER$_g$ (global)**: 0.513 - Tasa de error de caracteres a nivel de palabra
-- **CER$_{\tilde{n}}$**: 0.609 - Error específico en el carácter ñ
-- **Confusión ñ→n**: 91% - Proporción de errores al modelar la tilde
-- **11K+ palabras** evaluadas en español desde `data/spanish_words.txt`
+- **Paper**: *FW-GAN: Frequency-Driven Handwriting Synthesis with Wave-Modulated MLP Generator*
+- **Repositorio original**: [DAIR-Group/FW-GAN](https://github.com/DAIR-Group/FW-GAN)
 
-**Parámetros de evaluación:**
-- Se generó 1 imagen por muestra del test set (5,000 samples)
-- Métricas computadas usando TrOCR sin fine-tuning adicional
-- Resultados comparables con DiffusionPen y VATr-pp bajo mismo protocolo
+Este repo adapta el modelo original para español, con foco en el carácter ñ y adaptación vía fine-tuning. Para detalles de arquitectura y entrenamiento, consulta el repositorio original.
 
-## 📋 Introducción (detalle)
-GAN para síntesis de escritura manuscrito con módulos Wave-MLP modulados por ondas. Incorpora discriminador guided by frequency para fidelidad estilística mejorada. Evaluado en español con foco en el carácter ñ y adaptación via fine-tuning.
+## ⚙️ Instalación
 
-## 🚀 Flujo de Trabajo Venv (Paso a Paso)
-1. **Crear entorno virtual**: `python -m venv .venv`
-2. **Activar entorno**: `source .venv/bin/activate`
-3. **Instalar dependencias**: `pip install -r requirements.txt`
-4. **Generar muestras**: `python3 generate.py --config configs/fw_gan_global_es.yml ...`
+```bash
+# 1. Crear entorno virtual
+python -m venv .venv
+
+# 2. Activar entorno
+source .venv/bin/activate
+
+# 3. Instalar dependencias
+pip install -r requirements.txt
+```
 
 ## ▶️ Uso
+
 ```bash
 python3 generate.py \
   --config configs/fw_gan_global_es.yml \
@@ -37,17 +34,15 @@ python3 generate.py \
   --style_split train
 ```
 
-## 📥 Pesos del Modelo
-- `fw_gan.pt`: Modelo global - [Google Drive](https://drive.google.com/file/d/1_eMjG5VRTlVxRAhfZs70qc7pjk8F8Yhh/view?usp=sharing)
-- `fw_gan_finetuning.pt`: Fine-tuning autor específico - [Google Drive](https://drive.google.com/file/d/1yEqir161AOof1Te3zTVHcrqgRp1Sn2K2/view?usp=sharing)
+## 📥 Pesos del modelo
 
-## 📊 Resultados
-- 11K+ palabras en `data/spanish_words.txt`
-- n_class: 95 clases de caracteres
-- **Charset completo**: a-z, A-Z, **áéíóúÑüÜ**, dígitos, signos **¿¡**
-- Mejor para: vocabulario grande, generación one-shot
+| Archivo | Descripción | Enlace |
+|---|---|---|
+| `fw_gan.pt` | Modelo global | [Google Drive](https://drive.google.com/file/d/1_eMjG5VRTlVxRAhfZs70qc7pjk8F8Yhh/view?usp=sharing) |
+| `fw_gan_finetuning.pt` | Fine-tuning con autor específico | [Google Drive](https://drive.google.com/file/d/1yEqir161AOof1Te3zTVHcrqgRp1Sn2K2/view?usp=sharing) |
 
 ## 📄 Cita
+
 ```bibtex
 @article{tong2025fw,
   title={FW-GAN: Frequency-Driven Handwriting Synthesis with Wave-Modulated MLP Generator},
